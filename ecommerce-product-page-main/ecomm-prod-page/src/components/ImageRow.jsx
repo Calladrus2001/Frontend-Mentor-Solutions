@@ -15,7 +15,7 @@ function ImageRow({imageNum, setImageNum}) {
               <img 
                 src={`./src/assets/images/image-product-${image}.jpg`} 
                 alt="product image" 
-                className={`w-full h-full rounded-lg border-2 border-transparent ${imageNum == image && 'border-orange-500'}`}
+                className={`w-full h-full rounded-lg ${imageNum === image && 'border-2 border-orange-500'}`}
               />
             </div>
           )
