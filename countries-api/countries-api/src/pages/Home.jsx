@@ -9,17 +9,21 @@ import countries from '../data.json';
 
 
 function Home() {
-  console.log('Home rerendered')
   const {theme} = useContext(ThemeContext)
   const [visible, setVisible] = useState(false)
   const [data, setData] = useState(countries);
   const regions = ['None', 'Africa', 'Americas', 'Asia', 'Europe', 'Oceania'];
   return (
-    <div className={`w-full h-full px-12 py-8 ${theme ? 'bg-secondary':'bg-secondary-dark'}`}>
+    <div className={`w-full h-full min-h-screen px-12 py-8 ${theme ? 'bg-secondary':'bg-secondary-dark'}`}>
       <span className='sm:flex justify-between'>
         <Container className='flex items-center px-4 py-3 mb-8'>
           <IoMdSearch className='mr-3'/>
-          <input type="text" className={`text-xs ${theme ? 'bg-primary':'bg-primary-dark'} w-56 focus:outline-none`} placeholder='Search for a country...'/>
+          <input 
+            type="text" 
+            className={`text-xs ${theme ? 'bg-primary':'bg-primary-dark'} w-56 focus:outline-none`} 
+            placeholder='Search for a country...'
+            onChange={ (e) => { setData(filterCountries(e.target.value))}}
+          />
         </Container>
         <Container className='px-4 py-3 flex items-center relative space-x-8 max-w-40 text-xs mb-8'>
           <p>Filter by Region</p>
@@ -50,5 +54,10 @@ function Home() {
     </div>
   )
 }
+
+const filterCountries = (query) => {
+  const regex = new RegExp(query, 'i');
+  return countries.filter(country => regex.test(country.name));
+};
 
 export default Home

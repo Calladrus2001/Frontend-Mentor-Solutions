@@ -3,7 +3,12 @@ import Container from './Container'
 
 function Card({data}) {
   return (
-    <Container className='overflow-hidden cursor-pointer pb-3'>
+    <Container 
+      className='overflow-hidden cursor-pointer pb-3'
+      onClick={() => {
+        
+      }}
+    >
       <img src={data.flags.svg} alt="flag image" className='aspect-video'/>
       <div className='p-4 text-xs'>
         <h3 className='font-bold text-sm mb-2'>{data.name}</h3>
