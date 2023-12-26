@@ -5,7 +5,7 @@ import { ThemeContext } from '../context/Theme';
 function Header() {
   const {theme, setTheme} = useContext(ThemeContext);
   return (
-    <div className={`w-full flex justify-between items-center px-12 py-4 shadow-md ${theme ? '' : 'bg-primary-dark text-white'}`}>
+    <div className={`w-full flex justify-between items-center px-12 py-4 shadow-md ${theme ? 'bg-primary' : 'bg-primary-dark text-white'}`}>
       <h1 className='font-bold'>Where in the world?</h1>
       <h4 className='flex items-center cursor-pointer' onClick={() => {setTheme((prev) => !prev)}}>
         { theme ? <MdOutlineDarkMode />: <MdDarkMode/>}
