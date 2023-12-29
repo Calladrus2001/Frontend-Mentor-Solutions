@@ -14,7 +14,7 @@ export default {
       },
       borderWidth: {
         '10': '10px'
-      }
+      },
     },
   },
   plugins: [],
