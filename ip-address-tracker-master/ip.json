@@ -1,0 +1,21 @@
+{
+  "ip": "182.66.218.124",
+  "location": {
+      "country": "IN",
+      "region": "West Bengal",
+      "city": "Bara Bazar",
+      "lat": 22.56667,
+      "lng": 88.35,
+      "postalCode": "",
+      "timezone": "+05:30",
+      "geonameId": 1277155
+  },
+  "as": {
+      "asn": 9498,
+      "name": "BBIL-AP",
+      "route": "182.66.218.0\/24",
+      "domain": "http:\/\/www.Airtel.in",
+      "type": "NSP"
+  },
+  "isp": "Bharti Airtel Limited"
+}
